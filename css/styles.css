@@ -95,6 +95,23 @@ span {
 .menu-nav .item:last-child {
   margin-right: 0;
 }
+.pseudo {
+  display: inline-block;
+  align-items: center;
+}
+.current::before{
+  content: '';
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+}
 .nav-header {
   display: flex;
   align-items: center;
@@ -135,7 +152,11 @@ span {
 .current {
   color: var(--accent-color);
 }
-
+.link.current{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .hero {
   background-color: rgba(47, 48, 58, 0.4);
   max-width: 1600px;
@@ -192,7 +213,7 @@ span {
 }
 .work-desc {
   width: 370px;
-height: 70px;
+  height: 70px;
   position: absolute;
   bottom: 0;
   display: flex;
