@@ -99,8 +99,8 @@ span {
   display: inline-block;
   align-items: center;
 }
-.current::before{
-  content: '';
+.current::before {
+  content: "";
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -152,7 +152,7 @@ span {
 .current {
   color: var(--accent-color);
 }
-.link.current{
+.link.current {
   display: flex;
   align-items: center;
   position: relative;
@@ -208,6 +208,7 @@ span {
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 0.03em;
 }
@@ -633,4 +634,28 @@ li {
 }
 .footer-social-item:last-child {
   margin-right: 0;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-close{
+  position:absolute;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  
 }
