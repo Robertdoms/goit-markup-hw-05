@@ -20,5 +20,6 @@
   "singleAttributePerLine": false,
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
-  }
+  },
+  "liveServer.settings.port": 5501
 }
