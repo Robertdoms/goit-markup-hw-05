@@ -75,8 +75,9 @@ span {
 .menu-link .item:last-child {
   margin-right: 0px;
 }
-.link .icon {
+.link .icon{
   margin-right: 10px;
+  fill: currentColor;
 }
 .menu-nav {
   font-weight: 500;
@@ -469,7 +470,9 @@ li {
   transition: transform 250ms ease;
 }
 .teem {
+  background-color: #f5f4fa;
   position: relative;
+  overflow: hidden;
 }
 .teem-overlay {
   position: absolute;
@@ -492,7 +495,7 @@ li {
   line-height: 1.55;
   color: #ffffff;
 }
-.teem:hover .teem-overlay {
+.teem-link:hover .teem-overlay {
   transform: translateX(0);
 }
 .teem-link{
@@ -503,9 +506,6 @@ li {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.teem {
-  overflow: hidden;
 }
 .teem-list {
   display: flex;
@@ -533,7 +533,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: var(--social-icon);
+  color: var(--social-icon);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -583,7 +583,7 @@ li {
   width: 170px;
   height: 92px;
   border-radius: 4px;
-  fill: var(--social-icon);
+  color: var(--social-icon);
 }
 .customers-icon{
   fill: currentColor;
@@ -599,13 +599,11 @@ li {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  fill: var(--social);
+  color: var(--social);
 }
 .footer-social-link:focus,
 .footer-social-link:hover {
   background-color: var(--social-icon-hover);
-  color: var(--social);
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-title {
