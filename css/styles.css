@@ -8,6 +8,7 @@
   --social-icon: #afb1b8;
   --social-icon-hover: #2196f3;
   --social: #ffffff;
+  --btn-color:#f5f4fa;
 }
 body {
   color: var(--primary-text-color);
@@ -58,16 +59,10 @@ span {
   margin-left: 93px;
   text-align: center;
 }
-.menu-nav.list .menu:focus,
-:hover {
-  color: var(--accent-color);
-  transition: transform 250ms ease;
-}
 .menu-link .link:hover,
 :focus {
   color: var(--accent-color);
   text-decoration: none;
-  transition: transform 250ms ease;
 }
 .menu-link {
   margin-left: auto;
@@ -125,9 +120,8 @@ span {
   content: "";
 }
 .link {
-  display: inline-block;
+  display: flex;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
@@ -299,7 +293,7 @@ span {
   text-align: center;
 }
 .team {
-  background: #f5f4fa;
+  background-color: #f5f4fa;
 }
 .team .title {
   color: var(--title-text-color);
@@ -320,24 +314,18 @@ span {
   text-align: center;
   margin-bottom: 16px;
 }
-.filter {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  padding: 6px 22px;
-}
 .filter-item {
   margin-right: 8px;
 }
 .filter-item:last-child {
   margin-right: 0;
 }
-.filter-btn {
+.filter-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.filter-list .title {
+.filter .title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -345,7 +333,7 @@ span {
   margin: 0;
   margin-bottom: 4px;
 }
-.filter-list .text {
+.filter .text {
   color: var(--text-color);
   font-weight: 400;
   font-size: 16px;
@@ -369,35 +357,25 @@ span {
   display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.filter-list .filter:hover {
-  font-family: "Roboto";
+.filter-btn:focus,
+.filter-btn:hover {
   color: var(--hero-color);
   background: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  transition: transform 250ms ease;
 }
-.filter-list .filter:focus {
+.filter-btn {
   font-family: "Roboto";
-  color: var(--hero-color);
-  background: #2196f3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  transition: transform 250ms ease;
-}
-.filter-list .filter {
-  font-family: "Roboto";
-  color: var(--text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   cursor: pointer;
-  background: #f5f4fa;
+  background-color: var(--btn-color);
   border-radius: 4px;
-  color: #212121;
+  color: var(--title-text-color);
   border: none;
+  padding: 6px 22px;
 }
 .logo {
   color: var(--title-text-color);
@@ -517,12 +495,14 @@ li {
 .teem:hover .teem-overlay {
   transform: translateX(0);
 }
-.teem:hover,
-.teem:focus {
+.teem-link{
+  display: block;
+}
+.teem-link:hover,
+.teem-link:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: transform 250ms ease;
 }
 .teem {
   overflow: hidden;
@@ -560,9 +540,8 @@ li {
 }
 .social-item-link:hover,
 .social-item-link:focus {
-  fill: #ffffff;
+  color: var(--social);
   background-color: var(--social-icon-hover);
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list {
   display: flex;
@@ -577,7 +556,9 @@ li {
 .social-item-list .social-item-list:not(:last-child) {
   margin-right: 10px;
 }
-
+.social-item-dscr{
+  fill: currentColor;
+  }
 .customers {
   cursor: pointer;
   margin-right: 30px;
@@ -587,10 +568,8 @@ li {
 }
 .customers-item-link:focus,
 .customers-item-link:hover {
-  border: 1px solid var(--social-icon-hover);
-  border-radius: 4px;
-  fill: currentColor;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: var(--social-icon-hover);
+  color: var(--social-icon-hover);
 }
 .customers-list {
   display: flex;
@@ -606,7 +585,9 @@ li {
   border-radius: 4px;
   fill: var(--social-icon);
 }
-
+.customers-icon{
+  fill: currentColor;
+}
 .footer-social {
   margin-left: 70px;
 }
@@ -629,9 +610,7 @@ li {
 
 .footer-social-title {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14px;
-  letter-spacing: 0.03em;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--social);
   margin-bottom: 20px;
@@ -645,6 +624,9 @@ li {
 }
 .footer-social-item:last-child {
   margin-right: 0;
+}
+.footer-dscr{
+  fill: currentColor;
 }
 .modal {
   position: absolute;
