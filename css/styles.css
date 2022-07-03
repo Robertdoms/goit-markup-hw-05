@@ -476,12 +476,11 @@ li {
 .teem-link{
   display: block;
 }
-.teem-link:hover,
-.teem-link:focus {
+.teem:hover,
+.teem :focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    position: relative;
 }
 .teem-overlay {
   align-items: center;
@@ -511,7 +510,7 @@ li {
 .teem{
   overflow: hidden;
 }
-.teem-link:hover .teem-dscr {
+.teem:hover .teem-dscr {
   transform: translateY(0);
 }
 .teem-list {
