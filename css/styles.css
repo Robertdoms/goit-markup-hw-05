@@ -54,6 +54,8 @@ span {
   letter-spacing: 0.02em;
   color: #212121;
   padding: 32p 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .menu-nav.list {
   margin-left: 93px;
@@ -84,6 +86,10 @@ span {
 }
 .menu:hover,
 .menu:focus{
+  color: var(--accent-color);
+}
+.menu-link .link:hover,
+.menu-link .link:focus{
   color: var(--accent-color);
 }
 .menu-nav .item {
@@ -126,6 +132,8 @@ span {
   letter-spacing: 0.02em;
   color: #757575;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .menu-link.list .item {
   display: inline-block;
@@ -201,23 +209,18 @@ span {
 }
 .work-title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: 0.03em;
-}
-.work-desc {
-  width: 370px;
+  width: 100%;
   height: 70px;
   position: absolute;
   bottom: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 .section-title {
   color: var(--title-text-color);
@@ -376,6 +379,7 @@ span {
   color: var(--title-text-color);
   border: none;
   padding: 6px 22px;
+  transition-property: background color box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
@@ -414,6 +418,7 @@ span {
 .net{
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
+  background-color: #FFFFFF;
   border-top: none;
 }
 address {
@@ -453,13 +458,13 @@ li {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
 .address:hover,
-.address::focus {
+.address:focus {
   color: var(--accent-color);
-  transition: transform 250ms ease;
 }
 .maps {
   font-weight: 400;
@@ -483,9 +488,8 @@ li {
 .teem-link{
   display: block;
 }
-.teem:hover,
-.teem:focus {
-  border: 1px solid #eeeeee;
+.teem-link:hover,
+.teem-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -501,7 +505,8 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
+  transition-property: translateY ;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
   padding-left: 24px;
@@ -551,6 +556,7 @@ li {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition-property: background-color color ;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -600,6 +606,7 @@ li {
   height: 92px;
   border-radius: 4px;
   color: var(--social-icon);
+  transition-property: solid color ;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
@@ -618,6 +625,7 @@ li {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: var(--social);
+  transition-property: background;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -650,13 +658,23 @@ li {
   position: absolute;
   width: 528px;
   height: 581px;
-  background: #ffffff;
+  background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+.backdrop{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .backdrop.is-hidden{
   opacity: 0;
