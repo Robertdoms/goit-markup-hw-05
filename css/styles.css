@@ -60,7 +60,7 @@ span {
   text-align: center;
 }
 .menu-link .link:hover,
-:focus {
+.menu-link .link::focus {
   color: var(--accent-color);
   text-decoration: none;
 }
@@ -86,6 +86,10 @@ span {
   letter-spacing: 0.02em;
   color: #212121;
   display: flex;
+}
+.menu:hover,
+.menu:focus{
+  color: var(--accent-color);
 }
 .menu-nav .item {
   margin-right: 50px;
@@ -401,12 +405,6 @@ span {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.logo-2 :hover,
-:focus {
-  text-decoration: underline;
-  text-decoration-color: var(--accent-color);
-  transition: transform 250ms ease;
-}
 
 .heading {
   color: var(--title-text-color);
@@ -417,6 +415,11 @@ span {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.net{
+  padding: 20px 24px;
+  border: 1px solid #EEEEEE;
+  border-top: none;
 }
 address {
   font-style: normal;
@@ -459,7 +462,7 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
 .address:hover,
-:focus {
+.address::focus {
   color: var(--accent-color);
   transition: transform 250ms ease;
 }
@@ -473,7 +476,7 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .maps:hover,
-:focus {
+.maps:focus {
   color: var(--accent-color);
   transition: transform 250ms ease;
 }
@@ -486,7 +489,7 @@ li {
   display: block;
 }
 .teem:hover,
-.teem :focus {
+.teem:focus {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
