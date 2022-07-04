@@ -59,11 +59,6 @@ span {
   margin-left: 93px;
   text-align: center;
 }
-.menu-link .link:hover,
-.menu-link .link::focus {
-  color: var(--accent-color);
-  text-decoration: none;
-}
 .menu-link {
   margin-left: auto;
   display: flex;
