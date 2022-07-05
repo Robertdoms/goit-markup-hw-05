@@ -54,6 +54,7 @@ span {
   letter-spacing: 0.02em;
   color: #212121;
   padding: 32p 0;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -401,6 +402,7 @@ span {
   line-height: 1.19;
   color: #ffffff;
   margin-bottom: 20px;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
