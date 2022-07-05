@@ -62,6 +62,15 @@ span {
   margin-left: 93px;
   text-align: center;
 }
+<<<<<<< Updated upstream
+=======
+.menu-link .link:hover,
+:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+menu:hover
+>>>>>>> Stashed changes
 .menu-link {
   margin-left: auto;
   display: flex;
@@ -490,8 +499,13 @@ li {
 .teem-link{
   display: block;
 }
+<<<<<<< Updated upstream
 .teem-link:hover,
 .teem-link:focus {
+=======
+.teem:hover,
+.teem :focus {
+>>>>>>> Stashed changes
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
